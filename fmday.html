@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 18th Birthday Mysha! 🎂💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="hearts"></div>
+    
+    <!-- Confetti Canvas -->
+    <canvas id="confetti"></canvas>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Landing Section -->
+        <section class="landing" id="landing">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <p>Click to Open 💌</p>
+                </div>
+            </div>
+            <h2 class="click-hint">A Special Message Awaits...</h2>
+        </section>
+
+        <!-- Birthday Wish Section -->
+        <section class="birthday-section hidden" id="birthdaySection">
+            <!-- Countdown Timer -->
+            <div class="countdown-container" id="countdown">
+                <h2>✨ Countdown to Your Special Day ✨</h2>
+                <div class="countdown-timer">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Birthday Message (shown on the day) -->
+            <div class="birthday-message" id="birthdayMessage">
+                <div class="cake-animation">🎂</div>
+                <h1 class="main-title">
+                    <span class="highlight">Happy 18th Birthday</span>
+                    <br>
+                    <span class="name">Afrin Akter Mysha!</span>
+                </h1>
+                <div class="heart-divider">💖💖💖</div>
+                
+                <div class="message-card">
+                    <p class="wish-text">
+                        My Dearest Mysha,
+                    </p>
+                    <p class="wish-text">
+                        Today marks the beginning of a beautiful new chapter in your life. 
+                        You're officially 18! 🎉
+                    </p>
+                    <p class="wish-text">
+                        Every moment with you feels like a dream come true. Your smile lights up my world, 
+                        your laughter is my favorite melody, and your love is the greatest gift I've ever received.
+                    </p>
+                    <p class="wish-text">
+                        On this special day, I want you to know how incredibly lucky I am to have you in my life. 
+                        You make everything better just by being you. 💕
+                    </p>
+                    <p class="wish-text highlight-text">
+                       May Allah's blessings cleanse your heart, mind, and body on your birthday, and grant you a healthy and fulfilling life. May this year bring you endless happiness.
+                        I promise to be by your side, celebrating every moment with you.
+                    </p>
+                    <p class="signature">
+                        Forever Yours,<br>
+                        With all my love 💝
+                    </p>
+                </div>
+
+                <button class="surprise-btn" id="surpriseBtn">
+                    🎁 Click for a Surprise! 🎁
+                </button>
+            </div>
+
+            <!-- Candle Blowing Section -->
+            <div class="candle-section" id="candleSection">
+                <h2 class="section-title">🎂 Make a Wish & Blow the Candles! 🎂</h2>
+                <p class="candle-instruction">Click on the candles or blow into your microphone to blow them out!</p>
+                
+                <div class="cake-container">
+                    <div class="cake">
+                        <div class="cake-top">
+                            <div class="candles-row">
+                                <div class="candle" data-candle="1">
+                                    <div class="flame" id="flame1">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="wick"></div>
+                                    <div class="candle-body"></div>
+                                </div>
+                                <div class="candle" data-candle="2">
+                                    <div class="flame" id="flame2">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="wick"></div>
+                                    <div class="candle-body"></div>
+                                </div>
+                                <div class="candle" data-candle="3">
+                                    <div class="flame" id="flame3">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="wick"></div>
+                                    <div class="candle-body"></div>
+                                </div>
+                                <div class="number-candle">18</div>
+                                <div class="candle" data-candle="4">
+                                    <div class="flame" id="flame4">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="wick"></div>
+                                    <div class="candle-body"></div>
+                                </div>
+                                <div class="candle" data-candle="5">
+                                    <div class="flame" id="flame5">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="wick"></div>
+                                    <div class="candle-body"></div>
+                                </div>
+                                <div class="candle" data-candle="6">
+                                    <div class="flame" id="flame6">
+                                        <div class="flame-inner"></div>
+                                    </div>
+                                    <div class="wick"></div>
+                                    <div class="candle-body"></div>
+                                </div>
+                            </div>
+                            <div class="cake-frosting"></div>
+                            <div class="cake-decoration">Happy Birthday Mysha!</div>
+                        </div>
+                        <div class="cake-layer layer1"></div>
+                        <div class="cake-layer layer2"></div>
+                        <div class="cake-layer layer3"></div>
+                    </div>
+                </div>
+                
+                <button class="blow-btn" id="blowBtn">🌬️ Click to Blow Candles!</button>
+                <button class="mic-btn" id="micBtn">🎤 Enable Microphone to Blow</button>
+                <p class="blow-status" id="blowStatus"></p>
+                
+                <div class="wish-reveal hidden" id="wishReveal">
+                    <div class="wish-card">
+                        <h3>✨ Your wish has been made! ✨</h3>
+                        <p>May all your dreams come true, my love! 💖</p>
+                        <div class="sparkles">✨🌟💫⭐✨</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Balloon Pop Game -->
+            <div class="balloon-section" id="balloonSection">
+                <h2 class="section-title">🎈 Pop the Balloons for Surprises! 🎈</h2>
+                <p class="balloon-instruction">Click on balloons to pop them and reveal sweet messages!</p>
+                <div class="balloons-container" id="balloonsContainer">
+                    <div class="balloon" data-message="You're beautiful! 😍" style="--balloon-color: #ff6b6b;">🎈</div>
+                    <div class="balloon" data-message="I love your smile! 😊" style="--balloon-color: #ffd93d;">🎈</div>
+                    <div class="balloon" data-message="You're my everything! 💕" style="--balloon-color: #6bcb77;">🎈</div>
+                    <div class="balloon" data-message="Forever yours! 💝" style="--balloon-color: #4d96ff;">🎈</div>
+                    <div class="balloon" data-message="My heart beats for you! 💓" style="--balloon-color: #ff6bd6;">🎈</div>
+                    <div class="balloon" data-message="You make me happy! 🥰" style="--balloon-color: #a66cff;">🎈</div>
+                    <div class="balloon" data-message="Best girlfriend ever! 👑" style="--balloon-color: #ff9f6b;">🎈</div>
+                    <div class="balloon" data-message="18 looks perfect on you! 🎂" style="--balloon-color: #6bfff6;">🎈</div>
+                </div>
+                <div class="pop-message" id="popMessage"></div>
+            </div>
+
+            <!-- Scratch Card -->
+            <div class="scratch-section" id="scratchSection">
+                <h2 class="section-title">🎁 Scratch to Reveal Your Gift! 🎁</h2>
+                <p class="scratch-instruction">Use your mouse to scratch the card below!</p>
+                <div class="scratch-card-container">
+                    <canvas id="scratchCanvas" width="300" height="200"></canvas>
+                    <div class="scratch-reveal" id="scratchReveal">
+                        <p>🎁 My Gift to You 🎁</p>
+                        <p class="gift-text">A lifetime of love, endless hugs, and my heart forever! 💖</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="gallery-section">
+                <h2 class="gallery-title">💑 Our Beautiful Memories 💑</h2>
+                <p class="gallery-subtitle">Click on any photo to see our memory... 💕</p>
+                
+                <div class="gallery" id="gallery">
+                    <!-- Default placeholder images - Replace with your actual images -->
+                    <div class="gallery-item" data-memory="🌟2022🌟 The day we first met... my heart knew you were special! 💕">
+                        <img src="images/photo1.jpg" alt="Our Memory 1" onerror="this.src='https://via.placeholder.com/300x300/ff69b4/ffffff?text=Our+Photo+1'">
+                        <div class="gallery-overlay">
+                            <span>💖</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-memory="🌟2023🌟  Your smile lights up my entire world! 😍">
+                        <img src="images/photo2.jpg" alt="Our Memory 2" onerror="this.src='https://via.placeholder.com/300x300/ff1493/ffffff?text=Our+Photo+2'">
+                        <div class="gallery-overlay">
+                            <span>💕</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-memory="🌟2024🌟 Every moment with you is a treasure I'll keep forever! 🥰">
+                        <img src="images/photo3.jpg" alt="Our Memory 3" onerror="this.src='https://via.placeholder.com/300x300/ff6b6b/ffffff?text=Our+Photo+3'">
+                        <div class="gallery-overlay">
+                            <span>💗</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-memory="🌟2024🌟 You make ordinary days feel extraordinary! ✨">
+                        <img src="images/photo4.jpg" alt="Our Memory 4" onerror="this.src='https://via.placeholder.com/300x300/e91e63/ffffff?text=Our+Photo+4'">
+                        <div class="gallery-overlay">
+                            <span>💝</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-memory="🌟2024🌟 I fall in love with you more every special day! 💓">
+                        <img src="images/photo5.jpg" alt="Our Memory 5" onerror="this.src='https://via.placeholder.com/300x300/f06292/ffffff?text=Our+Photo+5'">
+                        <div class="gallery-overlay">
+                            <span>💞</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-memory="🌟2025🌟 You are my today and all of my tomorrows! 💖">
+                        <img src="images/photo6.jpg" alt="Our Memory 6" onerror="this.src='https://via.placeholder.com/300x300/ec407a/ffffff?text=Our+Photo+6'">
+                        <div class="gallery-overlay">
+                            <span>💓</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wishes Section -->
+            <div class="wishes-section">
+                <h2>🌟 18 Wishes for My 18-Year-Old Love 🌟</h2>
+                <div class="wishes-grid">
+                    <div class="wish-item">1. May all your dreams come true 🌈</div>
+                    <div class="wish-item">2. Endless happiness always 😊</div>
+                    <div class="wish-item">3. Success in everything you do 🏆</div>
+                    <div class="wish-item">4. Good health forever 💪</div>
+                    <div class="wish-item">5. Adventures that excite you 🌍</div>
+                    <div class="wish-item">6. Friends who cherish you 👯</div>
+                    <div class="wish-item">7. Love that grows stronger 💑</div>
+                    <div class="wish-item">8. Laughter every single day 😄</div>
+                    <div class="wish-item">9. Peace in your heart 🕊️</div>
+                    <div class="wish-item">10. Confidence to shine ✨</div>
+                    <div class="wish-item">11. Memories to treasure 📸</div>
+                    <div class="wish-item">12. Courage to chase dreams 🦋</div>
+                    <div class="wish-item">13. Kindness returned tenfold 🤗</div>
+                    <div class="wish-item">14. Beauty inside and out 🌸</div>
+                    <div class="wish-item">15. Wisdom for the journey 📚</div>
+                    <div class="wish-item">16. Surprises that delight 🎁</div>
+                    <div class="wish-item">17. Music in your soul 🎵</div>
+                    <div class="wish-item">18. My love forever 💝</div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-hearts">💖💕💗💝💞💓💖</div>
+                <p>Made with infinite love for my one and only</p>
+                <p class="footer-name">Afrin Akter Mysha</p>
+                <p class="footer-date">27th November 2025 - Your 18th Birthday 🎂</p>
+            </footer>
+        </section>
+    </div>
+
+    <!-- Background Music (optional) -->
+    <audio id="bgMusic" loop>
+        <source src="assets/birthday-song.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button class="music-toggle" id="musicToggle">🎵</button>
+
+    <!-- Memory popup - placed at body level for proper fixed positioning -->
+    <div class="memory-popup hidden" id="memoryPopup">
+        <div class="memory-popup-content">
+            <span class="memory-close" id="memoryClose">&times;</span>
+            <div class="memory-image" id="memoryImage"></div>
+            <p class="memory-text" id="memoryText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
